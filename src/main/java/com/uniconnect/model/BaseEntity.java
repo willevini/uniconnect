@@ -5,11 +5,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PreUpdate;
-import lombok.Data;
 
 import java.util.Date;
 
-@Data
 @MappedSuperclass
 public abstract class BaseEntity {
 

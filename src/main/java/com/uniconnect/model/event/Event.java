@@ -2,13 +2,17 @@ package com.uniconnect.model.event;
 
 import com.uniconnect.model.BaseEntity;
 import jakarta.persistence.Entity;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
-@EqualsAndHashCode(callSuper = true)
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Event extends BaseEntity {
 
