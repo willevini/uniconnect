@@ -15,9 +15,11 @@ public class EventService {
     public void save(EventSaveForm eventSaveForm) {
         Event event = new Event();
         event.setName(eventSaveForm.getName());
-        event.setPlace(eventSaveForm.getPlace());
         event.setStartDate(eventSaveForm.getStartDate());
         event.setEndDate(eventSaveForm.getEndDate());
+        event.setPlace(eventSaveForm.getPlace());
+        event.setDescription(eventSaveForm.getDescription());
+        event.setEnrollment(eventSaveForm.getEnrollment());
 
         eventRepository.save(event);
     }
