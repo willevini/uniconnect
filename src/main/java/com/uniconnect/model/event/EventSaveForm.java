@@ -12,15 +12,23 @@ public class EventSaveForm {
     @Size(max = 100)
     private String name;
 
-    @NotBlank
-    @Size(min = 8, max = 14)
-    private String place;
-
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date startDate;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date endDate;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String place;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String description;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String enrollment;
 
     public String getName() {
         return name;
@@ -53,4 +61,12 @@ public class EventSaveForm {
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
+
+    public String getDescription() { return description; }
+
+    public void setDescription(String description) { this.description = description; }
+
+    public String getEnrollment() { return enrollment; }
+
+    public void setEnrollment(String enrollment) { this.enrollment = enrollment; }
 }
