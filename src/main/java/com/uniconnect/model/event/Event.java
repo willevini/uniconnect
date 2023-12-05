@@ -18,9 +18,13 @@ public class Event extends BaseEntity {
 
     private String name;
 
-    private String place;
-
     private Date startDate;
 
     private Date endDate;
+
+    private String place;
+
+    private String description;
+
+    private String enrollment;
 }
