@@ -19,6 +19,8 @@ public abstract class BaseEntity {
 
     private Date dateUpdated;
 
+    private Boolean deleted = false;
+
     public BaseEntity() {
         this.dateCreated = new Date();
         this.dateUpdated = new Date();

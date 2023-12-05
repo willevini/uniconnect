@@ -23,12 +23,12 @@ public class EventController {
     @GetMapping("create")
     public String create(Model model) {
         model.addAttribute("eventSaveForm", new EventSaveForm());
-        return "page/event/create";
+        return "internalPages/event/create";
     }
 
     @PostMapping("save")
     public String save(@Valid EventSaveForm eventSaveForm, BindingResult result) {
         eventService.save(eventSaveForm);
-        return "page/event/create";
+        return "internalPages/event/create";
     }
 }
