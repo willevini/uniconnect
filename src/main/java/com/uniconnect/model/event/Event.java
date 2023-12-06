@@ -24,6 +24,18 @@ public class Event extends BaseEntity {
 
     private String place;
 
+    private String postalCode;
+
+    private String street;
+
+    private String neighborhood;
+
+    private String city;
+
+    private String state;
+
+    private String addressNumber;
+
     private String description;
 
     private String enrollment;
