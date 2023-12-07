@@ -1,5 +1,7 @@
 package com.uniconnect.model.event;
 
+import com.uniconnect.model.enums.*;
+
 import com.uniconnect.model.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -39,4 +41,8 @@ public class Event extends BaseEntity {
     private String description;
 
     private String enrollment;
+
+    private Status status;
+    
+    private Category category;
 }
