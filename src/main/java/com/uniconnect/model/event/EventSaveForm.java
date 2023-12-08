@@ -24,6 +24,30 @@ public class EventSaveForm {
 
     @NotBlank
     @Size(min = 8, max = 14)
+    private String postalCode;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String street;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String neighborhood;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String city;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String state;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
+    private String addressNumber;
+
+    @NotBlank
+    @Size(min = 8, max = 14)
     private String description;
 
     @NotBlank
@@ -36,14 +60,6 @@ public class EventSaveForm {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getPlace() {
-        return place;
-    }
-
-    public void setPlace(String place) {
-        this.place = place;
     }
 
     public Date getStartDate() {
@@ -61,6 +77,34 @@ public class EventSaveForm {
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
+
+    public String getPlace() { return place; }
+
+    public void setPlace(String place) {this.place = place; }
+
+    public String getPostalCode() { return postalCode; }
+
+    public void setPostalCode(String postalCode) { this.postalCode = postalCode; }
+
+    public String getStreet() { return street; }
+
+    public void setStreet(String street) { this.street = street; }
+
+    public String getNeighborhood() { return neighborhood; }
+
+    public void setNeighborhood(String neighborhood) { this.neighborhood = neighborhood; }
+
+    public String getCity() { return city; }
+
+    public void setCity(String city) { this.city = city; }
+
+    public String getState() { return state; }
+
+    public void setState(String state) { this.state = state; }
+
+    public String getAddressNumber() { return addressNumber; }
+
+    public void setAddressNumber(String addressNumber) { this.addressNumber = addressNumber; }
 
     public String getDescription() { return description; }
 

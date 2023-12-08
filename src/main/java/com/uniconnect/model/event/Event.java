@@ -1,5 +1,8 @@
 package com.uniconnect.model.event;
 
+import com.uniconnect.model.enums.Status;
+import com.uniconnect.model.enums.Category;
+
 import com.uniconnect.model.BaseEntity;
 import jakarta.persistence.Entity;
 import lombok.Getter;
@@ -28,9 +31,25 @@ public class Event extends BaseEntity {
 
     private String place;
 
+    private String postalCode;
+
+    private String street;
+
+    private String neighborhood;
+
+    private String city;
+
+    private String state;
+
+    private String addressNumber;
+
     private String description;
 
     private String enrollment;
+
+    private Status status;
+
+    private Category category;
 
     public String obtainMonthNameInBrazilian() {
         SimpleDateFormat formatter = new SimpleDateFormat("MMM", new Locale("pt", "BR"));

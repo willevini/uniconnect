@@ -22,6 +22,12 @@ public class EventService {
         event.setStartDate(eventSaveForm.getStartDate());
         event.setEndDate(eventSaveForm.getEndDate());
         event.setPlace(eventSaveForm.getPlace());
+        event.setPostalCode(eventSaveForm.getPostalCode());
+        event.setStreet(eventSaveForm.getStreet());
+        event.setNeighborhood(eventSaveForm.getNeighborhood());
+        event.setCity(eventSaveForm.getCity());
+        event.setState(eventSaveForm.getState());
+        event.setAddressNumber(eventSaveForm.getAddressNumber());
         event.setDescription(eventSaveForm.getDescription());
         event.setEnrollment(eventSaveForm.getEnrollment());
 
