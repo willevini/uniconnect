@@ -1,0 +1,12 @@
+package com.uniconnect.model.enums;
+
+public enum Category {
+    CIENCIAS_EXATAS,
+    CIENCIAS_BIOLOGICAS,
+    CIENCIAS_DA_SAUDE,
+    CIENCIAS_HUMANAS,
+    CIENCIAS_SOCIAIS_APLICADAS,
+    CIENCIAS_AGRARIAS,
+    ENGENHARIAS,
+    LINGUISTICA_LETRAS_E_ARTES
+}
