@@ -1,6 +1,7 @@
 package com.uniconnect.model.event;
 
-import com.uniconnect.model.enums.*;
+import com.uniconnect.model.enums.Status;
+import com.uniconnect.model.enums.Category;
 
 import com.uniconnect.model.BaseEntity;
 import jakarta.persistence.Entity;
