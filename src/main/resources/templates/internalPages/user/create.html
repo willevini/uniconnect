@@ -2,8 +2,7 @@
 <html
         lang="pt-br"
         xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-        layout:decorate="~{baseLayout}">
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +23,7 @@
         }
 
         .left-column {
-          background-color: rgb(147, 198, 198);
+          background-color: #01401C;
           flex: 0 0 500px;
           display: flex;
           flex-direction: column;
@@ -143,7 +142,6 @@
 <body>
 
 <div class="left-column">
-    <h1>UniConnect</h1>
     <i class="fas fa-user-plus"></i>
 </div>
 <div class="top-bar">
@@ -163,10 +161,6 @@
         <div class="form-group">
             <label for="password"></label>
             <input type="password" id="password" name="password" placeholder="Senha" required>
-        </div>
-        <div class="form-group">
-            <input type="checkbox" id="terms" name="terms" required>
-            <label for="terms">Eu concordo com os termos de serviço</label>
         </div>
         <div class="form-group">
             <button type="submit">Cadastrar</button>
