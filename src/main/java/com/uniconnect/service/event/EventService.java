@@ -3,14 +3,18 @@ package com.uniconnect.service.event;
 import com.uniconnect.model.event.Event;
 import com.uniconnect.model.event.EventSaveForm;
 import com.uniconnect.repository.event.EventRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class EventService {
 
-    @Autowired
-    private EventRepository eventRepository;
+    private final EventRepository eventRepository;
+
+    public EventService(EventRepository eventRepository) {
+        this.eventRepository = eventRepository;
+    }
 
     public void save(EventSaveForm eventSaveForm) {
         Event event = new Event();
@@ -28,5 +32,9 @@ public class EventService {
         event.setEnrollment(eventSaveForm.getEnrollment());
 
         eventRepository.save(event);
+    }
+
+    public List<Event> findAll() {
+        return eventRepository.findAllByDeletedFalse();
     }
 }

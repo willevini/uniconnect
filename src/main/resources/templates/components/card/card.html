@@ -1,0 +1,14 @@
+<div th:fragment="card(title, description, day, month, year, imageSrc)" class="card-item">
+    <div class="image-and-date-container">
+        <div class="datetime-item">
+            <p th:text="${day}" class="date day"></p>
+            <p th:text="${month}" class="date"></p>
+            <p th:text="${year}" class="date"></p>
+        </div>
+        <img class="card-image" th:src="${imageSrc}" alt="">
+    </div>
+    <div class="info-container">
+        <p th:text="${title}" class="card-title"></p>
+        <p th:text="${description}" class="card-description"></p>
+    </div>
+</div>

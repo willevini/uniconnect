@@ -1,0 +1,16 @@
+.navbar input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.navbar {
+    background-color: #01401C;
+}
+
+.icon-google {
+    background-color: #dd4b39;
+}
+
+.icon-instagram {
+    background-color: #ac2bac;
+}
