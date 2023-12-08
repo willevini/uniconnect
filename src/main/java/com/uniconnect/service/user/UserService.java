@@ -1,10 +1,12 @@
 package com.uniconnect.service.user;
-import com.uniconnect.model.user.LoginSaveForm;
+import com.uniconnect.model.user.LoginAuthForm;
 import com.uniconnect.model.user.User;
 import com.uniconnect.model.user.UserSaveForm;
 import com.uniconnect.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Objects;
 
 @Service
 public class UserService {
@@ -21,11 +23,12 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public void saveLogin(LoginSaveForm loginSaveForm) {
-        User user = new User();
-        user.setName(loginSaveForm.getName());
-        user.setPassword(loginSaveForm.getPassword());
+    public Boolean authLogin(LoginAuthForm loginAuthForm) {
+        User user = userRepository.findByEmail(loginAuthForm.getEmail());
 
-        userRepository.save(user);
+        if (user == null) return false;
+        if (!Objects.equals(user.getEmail(), loginAuthForm.getEmail())) return false;
+
+        return Objects.equals(user.getPassword(), loginAuthForm.getPassword());
     }
 }

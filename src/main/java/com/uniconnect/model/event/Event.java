@@ -49,9 +49,9 @@ public class Event extends BaseEntity {
 
     private String enrollment;
 
-    private Status status;
-
-    private Category category;
+//    private Status status;
+//
+//    private Category category;
 
     public String obtainMonthNameInBrazilian() {
         SimpleDateFormat formatter = new SimpleDateFormat("MMM", new Locale("pt", "BR"));

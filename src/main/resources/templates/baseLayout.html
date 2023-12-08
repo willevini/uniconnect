@@ -33,7 +33,12 @@
             </div>
             <div class="d-flex justify-content-end flex-grow-1">
                 <form class="d-flex">
-                    <button class="btn btn-outline-light" type="submit">Login</button>
+                    <div th:if="${session.authenticated != null}">
+                        <a class="btn btn-outline-light" th:href="@{/event/create}">Criar evento</a>
+                    </div>
+                    <div th:if="${session.authenticated == null}">
+                        <a class="btn btn-outline-light" th:href="@{/user/login}">Login</a>
+                    </div>
                 </form>
             </div>
         </div>
