@@ -5,6 +5,7 @@ import com.uniconnect.model.user.UserSaveForm;
 import com.uniconnect.repository.user.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Objects;
 
@@ -23,12 +24,13 @@ public class UserService {
         userRepository.save(user);
     }
 
-    public Boolean authLogin(LoginAuthForm loginAuthForm) {
+    public void authLogin(LoginAuthForm loginAuthForm, RedirectAttributes redirectAttributes) {
         User user = userRepository.findByEmail(loginAuthForm.getEmail());
 
-        if (user == null) return false;
-        if (!Objects.equals(user.getEmail(), loginAuthForm.getEmail())) return false;
+        if (user == null) return;
+        if (!Objects.equals(user.getEmail(), loginAuthForm.getEmail())) return;
+        if (!Objects.equals(user.getPassword(), loginAuthForm.getPassword())) return;
 
-        return Objects.equals(user.getPassword(), loginAuthForm.getPassword());
+        redirectAttributes.addFlashAttribute("authenticated", loginAuthForm.getEmail());
     }
 }
