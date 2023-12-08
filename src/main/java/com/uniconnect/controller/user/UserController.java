@@ -40,10 +40,8 @@ public class UserController {
     }
 
     @PostMapping("login/validate")
-    public String saveLogin(@Valid LoginAuthForm loginAuthForm, HttpSession session, RedirectAttributes redirectAttributes) {
-        if (userService.authLogin(loginAuthForm)) {
-            redirectAttributes.addFlashAttribute("authenticated", loginAuthForm.getEmail());
-        }
+    public String saveLogin(@Valid LoginAuthForm loginAuthForm, RedirectAttributes redirectAttributes) {
+        userService.authLogin(loginAuthForm, redirectAttributes);
         return "redirect:/";
     }
 }
