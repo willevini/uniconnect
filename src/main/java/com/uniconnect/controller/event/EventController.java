@@ -29,4 +29,9 @@ public class EventController {
         eventService.save(eventSaveForm);
         return "page/event/create";
     }
+
+    @GetMapping("resume")
+    public String resume() { 
+        return "page/event/resume";
+    }
 }
