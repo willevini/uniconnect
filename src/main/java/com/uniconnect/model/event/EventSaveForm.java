@@ -12,6 +12,10 @@ public class EventSaveForm {
     @Size(max = 100)
     private String name;
 
+    @NotBlank
+    @Size(max = 200)
+    private String image;
+
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date startDate;
 
@@ -113,4 +117,8 @@ public class EventSaveForm {
     public String getEnrollment() { return enrollment; }
 
     public void setEnrollment(String enrollment) { this.enrollment = enrollment; }
+
+    public String getImage() { return image; }
+
+    public void setImage(String image) { this.image = image; }
 }
